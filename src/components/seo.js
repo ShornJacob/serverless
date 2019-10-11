@@ -25,6 +25,8 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+  //if expr1 can be converted to true, returns expr1; else, returns expr2.
   const metaDescription = description || site.siteMetadata.description
 
   return (
