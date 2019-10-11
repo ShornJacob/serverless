@@ -5,6 +5,14 @@ module.exports = {
     author: `gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "gatsby-boy",
+        acl: null
+      },
+    },
+
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,6 +39,12 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-     `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
+
+
+//s3 settings
+// https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html
+//setting acl to null
+// https://stackoverflow.com/a/54723965/669577
